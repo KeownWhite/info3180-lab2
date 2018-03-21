@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title%}
+profile
+{%endblock%}
+
+{% block js %}
+{% endblock %}
+
+
+{% block main %}
+{{super()}}
+<div class="profile">
+		<div class="profile-top">
+			<div id="profile-pic">
+  			<img src="{{ url_for('static', filename = 'me.jpg') }}">
+			</div>
+			<h4>Keown White</h4>
+			<div class="details">
+			<p>@krisyx</p>
+			<p>Kingston, Jamaica</p>
+			<p class="today"><b>Date joined:</b> {{today}}</p>
+			</div>
+		</div>
+		<div class = "profile-bottom">
+			<p class="description">Thinker, like to challenge ideals Programmer, IT Specialist and full time nerd(I'm not just a pretty face) Adventurer, I will try anything once</p>
+			<ul class="list1" id="thelist">
+				<li>
+					<h2><strong>7</strong></h2>
+					<p class="details"><small>Post</small></p>
+				</li>
+				<li>
+					<h2><strong>100</strong></h2>
+					<p class="details"><small>Following</small></p>
+				</li>
+				<li>
+					<h2><strong>250</strong></h2>
+					<p class="details"><small>Followers</small></p>
+				</li>
+			</ul>
+		</div>
+		<div style="text-align:center">
+			<button class="btn btn-info" type="button">Follow</button>
+		</div>
+	</div>
+{% endblock %}
